@@ -20,7 +20,7 @@ db = {}
 @bot.on(events.NewMessage(pattern="^[!?/]start$"))
 async def stsrt(event):
     await event.reply(
-            "**Heya, I am a Chugli Bot made by []!**",
+            "**Heya, I am a Chugli Bot made by [𒆜𝗞𝗔𝗔𝗟♛](https://t.me/coder_kaal)!**",
             buttons=[
                 [Button.switch_inline("Go Inline", query="")]
                 ]
