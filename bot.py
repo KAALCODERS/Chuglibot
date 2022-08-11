@@ -18,9 +18,9 @@ bot = TelegramClient(
 db = {}
 
 @bot.on(events.NewMessage(pattern="^[!?/]start$"))
-async def stsrt(event):
+async def start(event):
     await event.reply(
-            "**Heya, I am a Chugli Bot made by [𒆜𝗞𝗔𝗔𝗟♛](https://t.me/coder_kaal)!**",
+            "**Namastey🙏, I am a Chugli Bot made by [𒆜𝗞𝗔𝗔𝗟♛](https://t.me/coder_kaal)!**",
             buttons=[
                 [Button.switch_inline("Go Inline", query="")]
                 ]
