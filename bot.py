@@ -9,15 +9,15 @@ logging.basicConfig(level=logging.INFO)
 TOKEN = os.environ.get("TOKEN", None)
 
 bot = TelegramClient(
-        "Whisper",
-        api_id=6,
-        api_hash="eb06d4abfb49dc3eeb1aeb98ae0f581e"
+        "Chugli",
+        api_id= "2030616",
+        api_hash= "5d59a136dc7843a9b83736834d93ee67"
         ).start(
                 bot_token=TOKEN
                 )
 db = {}
 
-@bot.on(events.NewMessage(pattern="^[!?/]start$"))
+@bot.on(events.NewMessage(pattern="^[/]start"))
 async def start(event):
     await event.reply(
             "**Namastey🙏, I am a Chugli Bot made by [𒆜𝗞𝗔𝗔𝗟♛](https://t.me/coder_kaal)!**",
@@ -101,7 +101,7 @@ async def ws(event):
         return
     msg = db["msg"]
     if msg == []:
-        await event.anwswer(
+        await event.answer(
                 "Oops!\nIt's looks like chugli message got deleted from my server!", alert=True)
         return
     await event.answer(msg, alert=True)
